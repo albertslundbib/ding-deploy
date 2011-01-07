@@ -193,6 +193,12 @@ projects[webform][version] = "3.2"
 projects[wysiwyg][subdir] = "contrib"
 projects[wysiwyg][version] = "2.1"
 
+; Rødovre Bibliotekerne specific themes and modules
+
+projects[redbull][type] = "theme"
+projects[redbull][download][type] = "git"
+projects[redbull][download][url] = "https://troelslenda@github.com/Roedovre-Bibliotekerne/redbull.git"
+
 ; Themes
 projects[tao][version] = "3.2"
 
