@@ -197,7 +197,11 @@ projects[wysiwyg][version] = "2.1"
 
 projects[redbull][type] = "theme"
 projects[redbull][download][type] = "git"
-projects[redbull][download][url] = "https://troelslenda@github.com/Roedovre-Bibliotekerne/redbull.git"
+projects[redbull][download][url] = "https://github.com/Roedovre-Bibliotekerne/redbull.git"
+
+projects[redbull_modules][type] = "module"
+projects[redbull_modules][download][type] = "git"
+projects[redbull_modules][download][url] = "https://github.com/Roedovre-Bibliotekerne/redbull-modules.git"
 
 ; Themes
 projects[tao][version] = "3.2"
