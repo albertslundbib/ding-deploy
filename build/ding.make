@@ -205,10 +205,13 @@ projects[redbull_modules][download][url] = "https://github.com/Roedovre-Bibliote
 
 ; Themes
 projects[tao][version] = "3.2"
+projects[tao][type] = "theme"
 
 projects[rubik][version] = "3.0-beta2"
+projects[rubik][type] = "theme"
 
 projects[mothership][version] = "1.1"
+projects[mothership][type] = "theme"
 
 ; Ding theme
 
@@ -233,6 +236,8 @@ projects[ding][type] = "module"
 projects[ding][download][type] = "git"
 projects[ding][download][url] = "https://github.com/dingproject/ding.git"
 projects[ding][download][revision] = "v1.5.5"
+projects[ding][patch][] = "https://github.com/downloads/dingproject/ding/menu.patch"
+
 
 projects[ding_campaign][type] = "module"
 projects[ding_campaign][download][type] = "git"
