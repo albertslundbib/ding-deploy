@@ -203,6 +203,12 @@ projects[redbull_modules][type] = "module"
 projects[redbull_modules][download][type] = "git"
 projects[redbull_modules][download][url] = "https://github.com/Roedovre-Bibliotekerne/redbull-modules.git"
 
+projects[memcache][subdir] = "contrib"
+projects[memcache][version] = "1.8"
+
+projects[securepages][subdir] = "contrib"
+projects[securepages][version] = "1.9"
+
 ; Themes
 projects[tao][version] = "3.2"
 projects[tao][type] = "theme"
