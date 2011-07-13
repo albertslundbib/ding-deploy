@@ -137,7 +137,7 @@ projects[office_hours][type] = "module"
 projects[office_hours][subdir] = "contrib"
 projects[office_hours][download][type] = "git"
 projects[office_hours][download][url] = "https://github.com/dingproject/drupal-office_hours.git"
-projects[office_hours][download][tag] = "DRUPAL-6--2-0-UNOFFICIAL7"
+projects[office_hours][download][tag] = "6.x-2.0-unofficial9"
 
 projects[panels][subdir] = "contrib"
 projects[panels][version] = "3.9"
@@ -229,7 +229,7 @@ projects[mothership][type] = "theme"
 projects[dynamo][type] = "theme"
 projects[dynamo][download][type] = "git"
 projects[dynamo][download][url] = "https://github.com/dingproject/dynamo.git"
-projects[dynamo][download][revision] = "v2.1.6"
+projects[dynamo][download][revision] = "v2.1.7"
 
 ; Ding modules
 
@@ -252,12 +252,12 @@ projects[ding][patch][] = "https://github.com/downloads/dingproject/ding/menu.pa
 projects[ding_campaign][type] = "module"
 projects[ding_campaign][download][type] = "git"
 projects[ding_campaign][download][url] = "https://github.com/dingproject/ding-campaign.git"
-projects[ding_campaign][download][revision] = "v1.3.1"
+projects[ding_campaign][download][revision] = "v1.3.3"
 
 projects[ting][type] = "module"
 projects[ting][download][type] = "git"
 projects[ting][download][url] = "https://github.com/dingproject/ting.git"
-projects[ting][download][revision] = "v1.5.6"
+projects[ting][download][revision] = "v1.5.7"
 
 projects[trampoline][type] = "module"
 projects[trampoline][download][type] = "git"
