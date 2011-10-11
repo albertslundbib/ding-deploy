@@ -41,6 +41,12 @@ env.webroot_patterns = {
     'halla.dbc.dk': '/data/www/%(project)s.%(role)s.ting.dk',
 }
 
+# Paths to the Drupal files directory relative to the webroot
+env.filepaths = {
+    'default': 'sites/default/files',
+    'hiri.dbc.dk': 'files',
+}
+
 # Simple logging for actions. Use the WARNING level to tune out paramiko
 # noise which is logged as "INFO".
 LOG_FILENAME = '/tmp/deploy.log'
@@ -66,6 +72,14 @@ def _env_settings(project=None):
     else:
         env.webroot_pattern = env.webroot_patterns['default']
     env.webroot = env.webroot_pattern % {'project': project, 'role': env.role}
+
+    # Determine where the Drupal files directory is located
+    if env.host in env.filepaths:
+        env.filepath = env.filepaths[env.host]
+    elif env.project in env.filepaths:
+        env.filepath = env.filepaths[env.project]
+    else:
+        env.filepath = env.filepaths['default']
 
 def version(project=None):
     'Get the currently deployed version'
@@ -94,9 +108,10 @@ def sync_from_prod(project=None):
     run('mysqldump drupal6_ding_%s_prod | mysql drupal6_ding_%s_stg' % (env.project, env.project))
     prodPath = env.webroot_pattern % {'project': env.project, 'role': 'prod'}
     stgPath = env.webroot_pattern % {'project': env.project, 'role': 'stg'}
-    run('sudo rsync -avmCF --delete %(prod)s %(stg)s' % {
-        'prod': os.path.join(prodPath, 'files'),
-        'stg': os.path.join(stgPath, 'files')
+    filePath = env.filepath
+    run('rsync -avmCF --delete %(prod)s %(stg)s' % {
+        'prod': os.path.join(prodPath, filePath),
+        'stg': os.path.join(stgPath, filePath)
     })
 
 def deploy(project=None, commit=None):
