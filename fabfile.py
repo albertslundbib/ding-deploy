@@ -87,7 +87,7 @@ def version(project=None):
     require('user', 'hosts', 'webroot',
         used_for='These variables are used for finding the target deployment environment.',
     )
-    with cd(os.path.join(env.build_path, env.project, 'build')):
+    with cd(os.path.join(env.build_path, env.project)):
         run('git show | head -10')
 
 def reload_apache():
@@ -128,7 +128,7 @@ def deploy(project=None, commit=None):
     )
 
     make_path = time.strftime('ding-%Y%m%d%H%M')[:-1]
-    cwd = os.path.join(env.build_path, env.project, 'build')
+    cwd = os.path.join(env.build_path, env.project)
     abs_make_path = os.path.join(cwd, make_path)
 
     with cd(cwd):
