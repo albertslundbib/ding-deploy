@@ -92,8 +92,8 @@ def sync_from_prod(project=None):
         abort('sync_from_prod is not supported for non-stg roles.')
 
     run('mysqldump drupal6_ding_%s_prod | mysql drupal6_ding_%s_stg' % (env.project, env.project))
-    prodPath = env.webroot_pattern % {'project': project, 'role': 'prod'}
-    stgPath = env.webroot_pattern % {'project': project, 'role': 'stg'}
+    prodPath = env.webroot_pattern % {'project': env.project, 'role': 'prod'}
+    stgPath = env.webroot_pattern % {'project': env.project, 'role': 'stg'}
     run('sudo rsync -avmCF --delete %(prod)s %(stg)s' % {
         'prod': os.path.join(prodPath, 'files'),
         'stg': os.path.join(stgPath, 'files')
