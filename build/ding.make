@@ -253,8 +253,10 @@ projects[openruth][download][revision] = "v1.0.9"
 
 projects[ding][type] = "module"
 projects[ding][download][type] = "git"
-projects[ding][download][url] = "https://github.com/dingproject/ding.git"
-projects[ding][download][revision] = "v1.6.0"
+; projects[ding][download][url] = "https://github.com/dingproject/ding.git"
+; projects[ding][download][revision] = "v1.6.0"
+projects[ding][download][url] = "https://github.com/albertslundbib/ding.git"
+projects[ding][download][revision] = "84fd0c76a01b155afc8426d8ee7da9565baa1ef8"
 
 projects[ding_campaign][type] = "module"
 projects[ding_campaign][download][type] = "git"
